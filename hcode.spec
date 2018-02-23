@@ -41,5 +41,8 @@
         "BRAM": 1060,
         "DSP": 2760
     }
+  },
+  "compatible_shell": {
+    "shell-vc707-xillybus-ap_fifo128": "Compatible."
   }
 }
