@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2017.1_sdx (64-bit)
+# SW Build 1915620 on Thu Jun 22 17:54:59 MDT 2017
+# IP Build 1908669 on Thu Jun 22 19:20:41 MDT 2017
+# Start of session at: Fri Feb 23 08:53:14 2018
+# Process ID: 2432
+# Current directory: /home/cho/test/test/shell-ku3-xillybus-ap_fifo128/verilog/vivado
+# Command line: vivado xillydemo.xpr
+# Log file: /home/cho/test/test/shell-ku3-xillybus-ap_fifo128/verilog/vivado/vivado.log
+# Journal file: /home/cho/test/test/shell-ku3-xillybus-ap_fifo128/verilog/vivado/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project xillydemo.xpr
+remove_files  /home/cho/test/test/shell-ku3-xillybus-ap_fifo128/ip-src/ip_kvsorter_5d6fccfcca/ip_kvsorter_5d6fccfcca.dcp

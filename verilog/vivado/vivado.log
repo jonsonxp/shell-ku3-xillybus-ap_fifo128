@@ -1,0 +1,32 @@
+#-----------------------------------------------------------
+# Vivado v2017.1_sdx (64-bit)
+# SW Build 1915620 on Thu Jun 22 17:54:59 MDT 2017
+# IP Build 1908669 on Thu Jun 22 19:20:41 MDT 2017
+# Start of session at: Fri Feb 23 08:53:14 2018
+# Process ID: 2432
+# Current directory: /home/cho/test/test/shell-ku3-xillybus-ap_fifo128/verilog/vivado
+# Command line: vivado xillydemo.xpr
+# Log file: /home/cho/test/test/shell-ku3-xillybus-ap_fifo128/verilog/vivado/vivado.log
+# Journal file: /home/cho/test/test/shell-ku3-xillybus-ap_fifo128/verilog/vivado/vivado.jou
+#-----------------------------------------------------------
+Sourcing tcl script '/home/cho/.Xilinx/Vivado/Vivado_init.tcl'
+INFO: [Common 17-1460] Use of init.tcl in /opt2/Xilinx/SDx/2017.1/Vivado/scripts/init.tcl is deprecated. Please use Vivado_init.tcl 
+Sourcing tcl script '/opt2/Xilinx/SDx/2017.1/Vivado/scripts/init.tcl'
+16 Beta devices matching pattern found, 0 enabled.
+Loaded SDSoC Platform Tcl Library
+start_gui
+open_project xillydemo.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [Project 1-509] GeneratedRun file for 'synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'pcie_ku_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'clk_wiz_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'fifo_xillybus_128_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'impl_1' not found
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/cho/f1/aws-fpga/hdk/common/shell_v071417d3/hlx/design'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt2/Xilinx/SDx/2017.1/Vivado/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:06 . Memory (MB): peak = 6174.297 ; gain = 121.949 ; free physical = 9325 ; free virtual = 41861
+remove_files  /home/cho/test/test/shell-ku3-xillybus-ap_fifo128/ip-src/ip_kvsorter_5d6fccfcca/ip_kvsorter_5d6fccfcca.dcp
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Feb 23 08:55:33 2018...

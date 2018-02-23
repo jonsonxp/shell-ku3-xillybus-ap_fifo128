@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2017.1_sdx (64-bit)
+# SW Build 1915620 on Thu Jun 22 17:54:59 MDT 2017
+# IP Build 1908669 on Thu Jun 22 19:20:41 MDT 2017
+# Start of session at: Wed Jan 24 15:07:16 2018
+# Process ID: 21303
+# Current directory: /home/cho/Downloads/xillybus/xillybus-eval-kintexultrascale-2.0c/verilog
+# Command line: vivado -init xillydemo-vivado.tcl
+# Log file: /home/cho/Downloads/xillybus/xillybus-eval-kintexultrascale-2.0c/verilog/vivado.log
+# Journal file: /home/cho/Downloads/xillybus/xillybus-eval-kintexultrascale-2.0c/verilog/vivado.jou
+#-----------------------------------------------------------
+start_gui
+source ./xillydemo-vivado.tcl
+set_property board_part alpha-data.com:adm-pcie3-ku3:part0:1.0 [current_project]
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+set_property board_part alpha-data.com:adm-pcie3-ku3:part0:1.0 [current_project]
+config_ip_cache -import_from_project -use_cache_location /home/cho/f1/aws-fpga/hdk/common/shell_v071417d3/hlx/build/scripts/tclapp/xilinx/faasutils/ip/cache
+update_ip_catalog
+launch_runs impl_1 -to_step write_bitstream -jobs 8

@@ -1,0 +1,191 @@
+#-----------------------------------------------------------
+# Vivado v2017.1_sdx (64-bit)
+# SW Build 1915620 on Thu Jun 22 17:54:59 MDT 2017
+# IP Build 1908669 on Thu Jun 22 19:20:41 MDT 2017
+# Start of session at: Wed Jan 24 15:07:16 2018
+# Process ID: 21303
+# Current directory: /home/cho/Downloads/xillybus/xillybus-eval-kintexultrascale-2.0c/verilog
+# Command line: vivado -init xillydemo-vivado.tcl
+# Log file: /home/cho/Downloads/xillybus/xillybus-eval-kintexultrascale-2.0c/verilog/vivado.log
+# Journal file: /home/cho/Downloads/xillybus/xillybus-eval-kintexultrascale-2.0c/verilog/vivado.jou
+#-----------------------------------------------------------
+Sourcing tcl script '/home/cho/.Xilinx/Vivado/Vivado_init.tcl'
+*Modifying Vivado command: launch_runs (aws_proc_overrides.tcl)
+script dir /home/cho/f1/aws-fpga/hdk/common/shell_v071417d3/hlx/build/scripts
+INFO: [Common 17-1460] Use of init.tcl in /opt2/Xilinx/SDx/2017.1/Vivado/scripts/init.tcl is deprecated. Please use Vivado_init.tcl 
+Sourcing tcl script '/opt2/Xilinx/SDx/2017.1/Vivado/scripts/init.tcl'
+16 Beta devices matching pattern found, 16 enabled.
+Loaded SDSoC Platform Tcl Library
+start_gui
+source ./xillydemo-vivado.tcl
+# set proj_dir [file normalize [file dirname [info script]]/vivado]
+# set essentials_dir [file normalize "$proj_dir/../../vivado-essentials"]
+# set proj_lang Verilog
+# set proj_suffix v
+# set blockbundle 0
+# source $essentials_dir/main.tcl
+## set proj_name xillydemo
+## set thepart "xcku040-ffva1156-2-e"
+## set pcie_vivado pcie_ku
+## create_project $proj_name "$proj_dir/"
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt2/Xilinx/SDx/2017.1/Vivado/data/ip'.
+## set obj [get_projects $proj_name]
+## set_property "default_lib" "xil_defaultlib" $obj
+## set_property "part" $thepart $obj
+## set_property "simulator_language" "Mixed" $obj
+## set_property "source_mgmt_mode" "DisplayOnly" $obj
+## set_property target_language $proj_lang $obj
+## if {[string equal [get_filesets sources_1] ""]} {
+##   create_fileset -srcset sources_1
+## }
+## set obj [get_filesets sources_1]
+## set_property "top" "xillydemo" $obj
+## if $blockbundle {
+##   set_msg_config -new_severity "INFO" -id {IP_Flow 19-3298} -string {{fifo_xillybus_}}
+## 
+##   set_property "ip_repo_paths" "[file normalize "$proj_dir/../xillybus_block"]" [current_fileset]
+##   update_ip_catalog
+## 
+##   set files [list \
+##    "[file normalize "$proj_dir/../src/xillydemo.v"]"\
+##    "[file normalize "$essentials_dir/$pcie_vivado/$pcie_vivado.xci"]"\
+##    "[file normalize "$proj_dir/../blockdesign/blockdesign.bd"]"\
+##   ]
+## } else {
+##   set files [list \
+##    "[file normalize "$proj_dir/../src/xillydemo.$proj_suffix"]"\
+##    "[file normalize "$proj_dir/../src/xillybus.v"]"\
+##    "[file normalize "$proj_dir/../src/xillybus_core.v"]"\
+##    "[file normalize "$essentials_dir/fifo_8x2048/fifo_8x2048.xci"]"\
+##    "[file normalize "$essentials_dir/fifo_32x512/fifo_32x512.xci"]"\
+##    "[file normalize "$essentials_dir/$pcie_vivado/$pcie_vivado.xci"]"\
+##    "[file normalize "$proj_dir/../../core/xillybus_core.edf"]"\
+##   ]
+## }
+## set obj [get_filesets sources_1]
+## add_files -norecurse -fileset $obj $files
+WARNING: [IP_Flow 19-2162] IP 'fifo_8x2048' is locked:
+* IP definition 'FIFO Generator (12.0)' for IP 'fifo_8x2048' (customized with software release 2015.2) has a newer major version in the IP Catalog.
+* IP definition 'FIFO Generator (12.0)' for IP 'fifo_8x2048' (customized with software release 2015.2) has a different revision in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [IP_Flow 19-2162] IP 'fifo_32x512' is locked:
+* IP definition 'FIFO Generator (12.0)' for IP 'fifo_32x512' (customized with software release 2015.2) has a newer major version in the IP Catalog.
+* IP definition 'FIFO Generator (12.0)' for IP 'fifo_32x512' (customized with software release 2015.2) has a different revision in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [IP_Flow 19-2162] IP 'pcie_ku' is locked:
+* IP definition 'UltraScale FPGA Gen3 Integrated Block for PCI Express (4.0)' for IP 'pcie_ku' (customized with software release 2015.2) has a newer minor version in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+## upgrade_ip [get_ips]
+Upgrading 'fifo_32x512'
+INFO: [IP_Flow 19-1972] Upgraded fifo_32x512 from FIFO Generator 12.0 to FIFO Generator 13.1
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'fifo_32x512'...
+Upgrading 'fifo_8x2048'
+INFO: [IP_Flow 19-1972] Upgraded fifo_8x2048 from FIFO Generator 12.0 to FIFO Generator 13.1
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'fifo_8x2048'...
+Upgrading 'pcie_ku'
+INFO: [Device 21-403] Loading part xcku040-ffva1156-2-e
+xit::create_sub_core: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 6493.422 ; gain = 306.328 ; free physical = 14096 ; free virtual = 40906
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'select_quad' from 'GTH_Quad_225' to 'GTH_Quad_224' has been ignored for IP 'pcie_ku'
+WARNING: [IP_Flow 19-3501] Upgraded pcie_ku from UltraScale FPGA Gen3 Integrated Block for PCI Express 4.0 to UltraScale FPGA Gen3 Integrated Block for PCI Express 4.3, with warnings. Please review the message log.
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'pcie_ku'...
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'pcie_ku' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+upgrade_ip: Time (s): cpu = 00:00:22 ; elapsed = 00:00:20 . Memory (MB): peak = 6520.797 ; gain = 347.863 ; free physical = 14072 ; free virtual = 40886
+## if {[string equal [get_filesets constrs_1] ""]} {
+##   create_fileset -constrset constrs_1
+## }
+## set obj [get_filesets constrs_1]
+## add_files -fileset $obj -norecurse "[file normalize "$essentials_dir/xillydemo.xdc"]"
+## if $blockbundle {
+##   add_files -fileset $obj -norecurse "[file normalize "$proj_dir/../src/detach_clocks.xdc"]"
+## }
+## if {[string equal [get_filesets sim_1] ""]} {
+##   create_fileset -simset sim_1
+## }
+## if {[string equal [get_runs synth_1] ""]} {
+##   create_run -name synth_1 -part $thepart -flow {Vivado Synthesis 2014} -strategy "Vivado Synthesis Defaults" -constrset constrs_1
+## }
+## set obj [get_runs synth_1]
+## set_property "part" $thepart $obj
+## if {[string equal [get_runs impl_1] ""]} {
+##   create_run -name impl_1 -part $thepart -flow {Vivado Implementation 2014} -strategy "Vivado Implementation Defaults" -constrset constrs_1 -parent_run synth_1
+## }
+## set obj [get_runs impl_1]
+## set_property "part" $thepart $obj
+## set_property STEPS.PHYS_OPT_DESIGN.IS_ENABLED true $obj
+## set_property STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED true $obj
+## set_property STEPS.WRITE_BITSTREAM.TCL.PRE "$essentials_dir/showstopper.tcl" $obj
+## if $blockbundle {
+##     # The clocking wizard can't be part of blockdesign.bd, because the VLNV
+##     # definition requires a specific version. So grab the VLNV from the list
+##     # of IPs using wildcards, insert, configure and connect in Tcl.
+## 
+##     open_bd_design $proj_dir/../blockdesign/blockdesign.bd
+## 
+##     startgroup
+## 
+##     create_bd_cell -type ip -vlnv [get_ipdefs *:clk_wiz:*] stream_clk_gen
+##     set_property -dict [list CONFIG.PRIM_IN_FREQ.VALUE_SRC USER] \
+## 	[get_bd_cells stream_clk_gen]
+## 
+##     set_property -dict [list \
+## 			    CONFIG.PRIM_IN_FREQ {250} \
+## 			    CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {100} ] \
+## 	[get_bd_cells stream_clk_gen]
+## 
+##     connect_bd_net [get_bd_pins stream_clk_gen/clk_in1] [get_bd_pins xillybus_bundled_0/bus_clk]
+##     connect_bd_net [get_bd_pins stream_clk_gen/clk_out1] [get_bd_pins xillybus_bundled_0/ap_clk]
+##     connect_bd_net [get_bd_pins stream_clk_gen/reset] [get_bd_pins xillybus_bundled_0/quiesce]
+## 
+##     endgroup
+## 
+##     # Improve the graphic layout (hopefully)
+##     regenerate_bd_layout
+## 
+##     save_bd_design
+##     close_bd_design [get_bd_designs blockdesign]
+## }
+## puts "INFO: Project created: $proj_name"
+INFO: Project created: xillydemo
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+set_property board_part alpha-data.com:adm-pcie3-ku3:part0:1.0 [current_project]
+WARNING: [Project 1-153] The current project part 'xcku040-ffva1156-2-e' does not match with the 'ALPHA-DATA.COM:ADM-PCIE3-KU3:PART0:1.0' board part settings. The project part will be reset to 'ALPHA-DATA.COM:ADM-PCIE3-KU3:PART0:1.0' board part.
+INFO: [Project 1-152] Project part set to kintexu (xcku060-ffva1156-2-e)
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+Running pre-hook on launch_runs
+WARNING: [Project 1-153] The current project part 'xcku060-ffva1156-2-e' does not match with the 'XILINX.COM:F1_CL:PART0:1.0' board part settings. The project part will be reset to 'XILINX.COM:F1_CL:PART0:1.0' board part.
+INFO: [Project 1-152] Project part set to virtexuplus (xcvu9p-flgb2104-2-i)
+WARNING: [make_faas 1-2] IP *xilinx.com:ip:aws:1.0* not found, attempting to add IP Repository to project
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/cho/f1/aws-fpga/hdk/common/shell_v071417d3/hlx/design'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+INFO: [make_faas 10-1] Finished setting up project xillydemo for enhanced FaaS flow with Vivado HLx.
+ERROR: [aws_proc_overrides 0-2] Script launch_runs_pre.tcl threw error: can't read "::env(HDK_SHELL_DIR)": no such variable
+ERROR: [Common 17-39] 'send_msg_id' failed due to earlier errors.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+set_property board_part alpha-data.com:adm-pcie3-ku3:part0:1.0 [current_project]
+WARNING: [Project 1-153] The current project part 'xcvu9p-flgb2104-2-i' does not match with the 'ALPHA-DATA.COM:ADM-PCIE3-KU3:PART0:1.0' board part settings. The project part will be reset to 'ALPHA-DATA.COM:ADM-PCIE3-KU3:PART0:1.0' board part.
+INFO: [Project 1-152] Project part set to kintexu (xcku060-ffva1156-2-e)
+config_ip_cache -import_from_project -use_cache_location /home/cho/f1/aws-fpga/hdk/common/shell_v071417d3/hlx/build/scripts/tclapp/xilinx/faasutils/ip/cache
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+update_ip_catalog
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+Running pre-hook on launch_runs
+here
+/home/cho/Downloads/xillybus/xillybus-eval-kintexultrascale-2.0c/verilog/vivado/xillydemo.runs/faas_1
+ERROR: [synth_design_post 0-2] CLOCK_A_RECIPE not set.  Please set CLOCK_A_RECIPE environment variable to a value between 0:2.
+  example:
+	 set ::env(CLOCK_A_RECIPE) 0
+rethrowing ERROR: [Common 17-39] 'send_msg_id' failed due to earlier errors.
+ERROR: [Common 17-39]  'send_msg_id' failed due to earlier errors.
+ERROR: [Common 17-39] 'send_msg_id' failed due to earlier errors.
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 24 15:10:18 2018...

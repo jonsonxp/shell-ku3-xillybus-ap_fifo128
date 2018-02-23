@@ -1,0 +1,60 @@
+#!/bin/bash
+PROGNAME=$(basename $0)
+VERSION="0.1.1"
+
+usage() {
+  echo "usage: ./configure" 1>&2
+  echo "Options:" 1>&2
+  echo "    -clk NUMBER    		  : clock frequency in MHz (100, 150, 200 or 250)." 1>&2
+  echo "    -reference STRING     : The reference of code of ip in shell." 1>&2
+  exit 1
+}
+
+for i in "$@"
+do
+case $i in
+	    '-h'|'--help' )
+            usage
+            exit 1
+        ;;
+        '--version' )
+            echo $VERSION
+            exit 1
+            ;;
+        -reference)
+        	if [ -z "$2" ]; then
+        		echo "option requires an argument -- $1" 1>&2
+        		exit 1
+        	fi
+        	REFERENCE=$2
+        	shift 2
+        	;;
+        -clk)
+        	if [ -z "$2" ]; then
+        		echo "option requires an argument -- $1" 1>&2
+        		exit 1
+        	fi
+        	CLK=$2
+        	shift 2
+        	;;        
+        -*)
+		shift 2
+        ;;
+        *)
+        ;;
+esac
+done
+
+if [ -z $CLK ]; then
+    echo "$PROGNAME: too few arguments" 1>&2
+    usage
+    exit 1
+fi
+
+sed -i "/progma_ip_clk_1/c\assign ip_clk_1 = user_clk_$CLK;//progma_ip_clk_1" shell-src/hcode_shell_top.v
+echo "Updated the clock in ./shell-src/hcode_shell_top.v" 1>&2
+
+if [ "$REFERENCE" ]; then
+	sed -i "/progma_ip_wrapper_1/c\ $REFERENCE //progma_ip_wrapper_1" shell-src/hcode_shell_top.v
+	echo "Updated the IP reference in ./shell-src/hcode_shell_top.v" 1>&2
+fi
